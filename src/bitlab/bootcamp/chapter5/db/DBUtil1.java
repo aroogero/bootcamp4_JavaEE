@@ -1,5 +1,7 @@
 package bitlab.bootcamp.chapter5.db;
 
+import bitlab.bootcamp.chapter5.db.model.ClientTask;
+
 import java.util.ArrayList;
 
 public class DBUtil1 {

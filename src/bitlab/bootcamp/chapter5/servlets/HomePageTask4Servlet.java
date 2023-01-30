@@ -1,6 +1,6 @@
 package bitlab.bootcamp.chapter5.servlets;
 
-import bitlab.bootcamp.chapter5.db.ClientTask;
+import bitlab.bootcamp.chapter5.db.model.ClientTask;
 import bitlab.bootcamp.chapter5.db.DBUtil1;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

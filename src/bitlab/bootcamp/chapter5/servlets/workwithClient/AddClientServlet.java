@@ -1,6 +1,7 @@
-package bitlab.bootcamp.chapter5.servlets;
+package bitlab.bootcamp.chapter5.servlets.workwithClient;
 
-import bitlab.bootcamp.chapter5.db.ClientUser;
+import bitlab.bootcamp.chapter5.db.model.ClientUser;
+import bitlab.bootcamp.chapter5.db.mySql.DBManager1_jdbc;
 import bitlab.bootcamp.chapter5.db.DBUtil;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -29,13 +30,16 @@ public class AddClientServlet extends HttpServlet {
         int age = Integer.parseInt(request.getParameter("user_age"));
         String city = request.getParameter("user_city");
 
-        ClientUser user = new ClientUser();
+        ClientUser user = new ClientUser(); //упаковал объекта
         user.setName(name);
         user.setAge(age);
         user.setCity(city);
 
-        DBUtil.addUser(user);
-        response.sendRedirect("/");
+        //DBUtil.addUser(user); //и передал
+
+        //но jdbc мы говорим, что это будет делать база данных. поставщика меняем
+        DBManager1_jdbc.addUser(user);
+        response.sendRedirect("/add-client?success"); //можем сделать так, чтобы возвращался сам на себя / прикольная вещь параметр саксес передаем через гет. Реструктуризацию проекта сделали. Если добавление клиента пройдет удачно
     }
 
 }

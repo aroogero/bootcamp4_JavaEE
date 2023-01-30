@@ -1,4 +1,4 @@
-<%@ page import="bitlab.bootcamp.chapter5.db.ClientTask" %>
+<%@ page import="bitlab.bootcamp.chapter5.db.model.ClientTask" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>

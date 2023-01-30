@@ -1,7 +1,8 @@
-package bitlab.bootcamp.chapter5.servlets;
+package bitlab.bootcamp.chapter5.servlets.workwithClient;
 
-import bitlab.bootcamp.chapter5.db.ClientUser;
+import bitlab.bootcamp.chapter5.db.model.ClientUser;
 import bitlab.bootcamp.chapter5.db.DBUtil;
+import bitlab.bootcamp.chapter5.db.mySql.DBManager1_jdbc;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -25,7 +26,9 @@ public class DetailsServlet extends HttpServlet {
 
         }
 //тут мы должны вытащить одного пользователя и передать в какой-нибудь detail.jsp страница детального просмотра
-    ClientUser clientUser = DBUtil.getUser(id); //вот сюда мы должны передать id. Чтобы поставить, нам нужно получить id
+   // ClientUser clientUser = DBUtil.getUser(id); //вот сюда мы должны передать id. Чтобы поставить, нам нужно получить id
+      //Меняем поставщика
+        ClientUser clientUser = DBManager1_jdbc.getUser(id);
        request.setAttribute("user", clientUser);
        request.getRequestDispatcher("/details.jsp").forward(request,response);
     }

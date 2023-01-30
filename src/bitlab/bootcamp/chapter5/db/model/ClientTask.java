@@ -1,4 +1,4 @@
-package bitlab.bootcamp.chapter5.db;
+package bitlab.bootcamp.chapter5.db.model;
 
 public class ClientTask {
 

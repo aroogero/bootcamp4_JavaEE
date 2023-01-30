@@ -1,4 +1,4 @@
-<%@ page import="bitlab.bootcamp.chapter5.db.ClientUser" %>
+<%@ page import="bitlab.bootcamp.chapter5.db.model.ClientUser" %>
 <%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: zhbek
