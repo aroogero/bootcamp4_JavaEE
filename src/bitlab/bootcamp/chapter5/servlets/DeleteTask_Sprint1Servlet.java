@@ -1,7 +1,6 @@
 package bitlab.bootcamp.chapter5.servlets;
 
-import bitlab.bootcamp.chapter5.db.model.ClientTask;
-import bitlab.bootcamp.chapter5.db.DBUtil1;
+import bitlab.bootcamp.chapter5.db.DBManager_Sprint1;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -10,8 +9,8 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(value="/details-task4")
-public class DetailsTask4Servlet extends HttpServlet {
+@WebServlet(value="/delete-task4")
+public class DeleteTask_Sprint1Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
@@ -22,9 +21,7 @@ public class DetailsTask4Servlet extends HttpServlet {
         } catch (Exception e) {
 
         }
-        ClientTask task = DBUtil1.getTask(id);
-        request.setAttribute("onetask", task);
-        request.getRequestDispatcher("/details-task4.jsp").forward(request,response);
+        DBManager_Sprint1.deleteTask(id);
+        response.sendRedirect("/homepage-task4");
     }
 }
-

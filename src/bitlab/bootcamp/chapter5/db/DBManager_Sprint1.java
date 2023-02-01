@@ -4,7 +4,7 @@ import bitlab.bootcamp.chapter5.db.model.ClientTask;
 
 import java.util.ArrayList;
 
-public class DBUtil1 {
+public class DBManager_Sprint1 {
     public static ArrayList<ClientTask> tasks = new ArrayList<>();
     private static int id = 4;
 
@@ -30,7 +30,8 @@ public class DBUtil1 {
     public static void deleteTask(int id) { //этот метод удаляет задачу из списка по id
         tasks.remove(id);
     }
-    /*public static void editTask (int id, String name, String opisanie, String deadline, String yesNo) {
+
+   /* public static void editTask (int id, String name, String opisanie, String deadline, String yesNo) {
         ClientTask Task = new ClientTask(id, name, deadline, yesNo, opisanie);
         tasks.set(id, Task);
     }*/

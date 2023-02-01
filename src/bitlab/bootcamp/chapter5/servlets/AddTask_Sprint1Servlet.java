@@ -1,7 +1,7 @@
 package bitlab.bootcamp.chapter5.servlets;
 
 import bitlab.bootcamp.chapter5.db.model.ClientTask;
-import bitlab.bootcamp.chapter5.db.DBUtil1;
+import bitlab.bootcamp.chapter5.db.DBManager_Sprint1;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(value="/add-task4")
-public class AddTaskServlet extends HttpServlet {
+public class AddTask_Sprint1Servlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request,
@@ -26,7 +26,7 @@ public class AddTaskServlet extends HttpServlet {
         task.setDeadline(deadline);
         task.setYesNo("Нет");
 
-        DBUtil1.addTask(task);
+        DBManager_Sprint1.addTask(task);
         response.sendRedirect("/");
     }
 
