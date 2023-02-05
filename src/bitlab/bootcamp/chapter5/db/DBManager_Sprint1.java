@@ -21,8 +21,7 @@ public class DBManager_Sprint1 {
     public static ClientTask getTask(int id) { // этот метод возвращает объект задачи по id
         return tasks.stream().
                 filter(ClientTask -> id == ClientTask.getId()). //
-                        findFirst().
-                orElse(null);
+                        findFirst().orElse(null);
     }
     public static ArrayList<ClientTask> getAllTasks() { //этот метод возвращает список всех задач
         return tasks;

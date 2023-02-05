@@ -25,12 +25,12 @@
 <body>
 <div class="container mb-5">
     <%@include file="navbar-task4.jsp"%>
+    <form action="/edit-task4" method="post">
     <div class="row mt-3">
         <div class="col-6 mx-auto">
             <%
                 if (task != null) {
             %>
-            <form action="/edit-task4" method="post">
                 <div class="row mt-3">
                     <div class="col-12">
                         <label>Наименование : </label>
@@ -83,21 +83,8 @@
                         <div class="row mt-2">
                             <div class="d-grid gap-2 d-md-block">
                                 <button class="btn btn-success" type="submit">Сохранить</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    </form>
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <form action="/delete-task4" method="get">
-                                    <input type="hidden" name="id" value="<%=task.getId()%>">
-                                    <button class="btn btn-danger" type="button">Удалить</button>
-                                </form>
-                            </div>
+                                <input type="hidden" name="id" value="<%=task.getId()%>">
+                                <a href="/delete-task4" class="btn btn-danger">Удалить</a>
                         </div>
                     </div>
                 </div>

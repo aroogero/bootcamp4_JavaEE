@@ -8,17 +8,14 @@
 </head>
 <body>
 <div class="container mb-5">
-    <div>
     <%@include file="navbar-task4.jsp" %>
 </div>
 <div class="row mt-3 mb-3">
     <div class="col-12">
-<!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     + Добавить задание
 </button>
 
-<!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

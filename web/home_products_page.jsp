@@ -1,4 +1,3 @@
-<%@ page import="bitlab.bootcamp.chapter5.db.model.ClientUser" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="bitlab.bootcamp.chapter5.db.model.Items" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -11,7 +10,7 @@
 <body>
 <div class="container mb-5" style="min-height: 800px;">
     <%@include file="navbar_sprint2.jsp"%>
-    <div class="row">
+    <div class="row text-center">
         <h1>Welcome to BITLAB SHOP</h1><br>
         <h5>Electronic devices with high quality and service</h5>
         <div class="row">
@@ -20,10 +19,13 @@
             if (items != null) {
                 for (Items item:items) {
         %>
-            <div class="card col-4">
+            <
+            <div class="card text-bg-light mx-auto">
+                <div class="card-header"><h3 class="card-title"><%=item.getName()%></h3></div>
                 <div class="card-body">
-                    <h5 class="card-title"><%=item.getName()%></h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><%=item.getPrice()%></h6>
+                    <div class="text-success">
+                    <h5 class="card-text mb-2">$<%=item.getPrice()%></h5>
+                    </div>
                     <p class="card-text"><%=item.getRAM()%></p>
                     <p class="card-text"><%=item.getSSD()%></p>
                     <p class="card-text"><%=item.getProcessor()%></p>

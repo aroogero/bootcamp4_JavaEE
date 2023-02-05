@@ -8,6 +8,6 @@
 
                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
     <welcome-file-list>
-        <welcome-file>homepage-task4</welcome-file>
+        <welcome-file>items_task2-1</welcome-file>
     </welcome-file-list>
 </web-app>

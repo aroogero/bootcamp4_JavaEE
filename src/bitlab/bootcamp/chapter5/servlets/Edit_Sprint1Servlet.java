@@ -19,6 +19,7 @@ public class Edit_Sprint1Servlet extends HttpServlet {
         int id = Integer.parseInt(idt4);
         ClientTask task = DBManager_Sprint1.getTask(id);
 
+        int idd = Integer.parseInt(request.getParameter("user_id"));
         String name = request.getParameter("user_reName");
         String opisanie = request.getParameter("user_reOpisanie");
         String deadline = request.getParameter("user_reDeadline");
@@ -29,6 +30,6 @@ public class Edit_Sprint1Servlet extends HttpServlet {
         task.setDeadline(deadline);
         task.setYesNo(yesNo);
 //        DBUtil_Sprint1.editTask(id,name,opisanie,deadline,yesNo);
-        response.sendRedirect("/");
+        response.sendRedirect("/homepage-task4");
     }
 }
